@@ -92,6 +92,7 @@ async function configureSafetySettings() {
   const stopLoss = parseFloat(await prompt("Stop at loss amount (0 = disabled): ")) || 0;
   const pauseOnLoss = await prompt("Pause after each loss? (y/n) [default: n]: ") === 'y';
   const emergencyStop = parseFloat(await prompt("Emergency stop at balance threshold (0 = disabled): ")) || 0;
+  const targetBalance = parseFloat(await prompt("Stop when balance reaches this amount (0 = disabled): ")) || 0;
   
   return {
     maxLossStreak,
@@ -99,7 +100,8 @@ async function configureSafetySettings() {
     stopProfit,
     stopLoss,
     pauseOnLoss,
-    emergencyStop
+    emergencyStop,
+    targetBalance
   };
 }
 
@@ -156,6 +158,7 @@ function viewCurrentConfig() {
   console.log(`  Stop Profit: ${config.stopProfit || 'Disabled'}`);
   console.log(`  Stop Loss: ${config.stopLoss || 'Disabled'}`);
   console.log(`  Emergency Stop: ${config.emergencyStop || 'Disabled'}`);
+  console.log(`  Target Balance: ${config.targetBalance || 'Disabled'}`);
   
   console.log(chalk.white("\nConnection:"));
   console.log(`  Cookie: ${config.cookie ? '✅ Set' : '❌ Not set'}`);
@@ -297,6 +300,10 @@ async function runBot() {
       console.log(chalk.green("🎯 Win streak target reached!"));
       break;
     }
+    if (config.targetBalance && balanceCurrent !== null && balanceCurrent >= config.targetBalance) {
+      console.log(chalk.green(`🏁 Target balance of ${config.targetBalance} reached!`));
+      break;
+    }
     if (balanceCurrent !== null) {
       const currentProfit = balanceCurrent - balanceStart;
       const currentLoss = balanceStart - balanceCurrent;
@@ -359,8 +366,8 @@ async function runBot() {
       profit: +profit.toFixed(2)
     });
     
-    if (history.length > 100) {
-      history = history.slice(-100);
+    if (history.length > 250) {
+      history = history.slice(-250);
     }
     fs.writeFileSync(HISTORY_PATH, JSON.stringify(history, null, 2));
 
