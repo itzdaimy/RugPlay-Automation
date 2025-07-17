@@ -156,36 +156,6 @@
 5. 🔄 Reset Configuration
 6. 🔙 Back to Main Menu
 ```
-
----
-
-## 🔧 API Integration
-
-The bot interfaces with RugPlay's coinflip API:
-
-```javascript
-const API_URL = 'https://rugplay.com/api/gambling/coinflip';
-```
-
-### Request Format
-```json
-{
-  "side": "heads",
-  "amount": 10.0
-}
-```
-
-### Response Format
-```json
-{
-  "won": true,
-  "result": "heads",
-  "payout": 19.8,
-  "newBalance": 109.8,
-  "amountWagered": 10.0
-}
-```
-
 ---
 
 ## 📈 Performance Tracking
