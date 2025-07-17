@@ -63,7 +63,7 @@
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/itzdaimy//RugPlay-Automation.git
+   git clone https://github.com/itzdaimy/RugPlay-Automation.git
    cd rugplay-bot
    ```
 
