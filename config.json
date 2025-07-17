@@ -1,0 +1,16 @@
+{
+  "side": "heads",
+  "initialBet": 15,
+  "maxBet": 200,
+  "maxAttempts": 100,
+  "maxLossStreak": 4,
+  "stopProfit": 250,
+  "cookie": "cookie",
+  "webhook": "webhook",
+  "bettingStrategy": "aggressive",
+  "delayBetween": 1500,
+  "stopOnWinStreak": 5,
+  "stopLoss": 75,
+  "pauseOnLoss": false,
+  "emergencyStop": 6900
+}
