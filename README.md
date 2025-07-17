@@ -1,8 +1,8 @@
 # 🎯 RugPlay Smart Coinflip Bot
 
-[![GitHub stars](https://img.shields.io/github/stars/yourusername/rugplay-bot?style=for-the-badge&logo=github&color=yellow)](https://github.com/itzdaimy/RugPlay-Automation/stargazers)
-[![GitHub forks](https://img.shields.io/github/forks/yourusername/rugplay-bot?style=for-the-badge&logo=github&color=blue)](https://github.com/itzdaimy/RugPlay-Automation/network)
-[![GitHub issues](https://img.shields.io/github/issues/yourusername/rugplay-bot?style=for-the-badge&logo=github&color=red)](https://github.com/itzdaimy/RugPlay-Automation/issues)
+[![GitHub stars](https://img.shields.io/github/stars/itzdaimy/RugPlay-Automation?style=for-the-badge&logo=github&color=yellow)](https://github.com/itzdaimy/RugPlay-Automation/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/itzdaimy/RugPlay-Automation?style=for-the-badge&logo=github&color=blue)](https://github.com/itzdaimy/RugPlay-Automation/network)
+[![GitHub issues](https://img.shields.io/github/issues/itzdaimy/RugPlay-Automation?style=for-the-badge&logo=github&color=red)](https://github.com/itzdaimy/RugPlay-Automation/issues)
 [![License](https://img.shields.io/badge/license-MIT-green.svg?style=for-the-badge)](LICENSE)
 [![Node.js](https://img.shields.io/badge/Node.js-18+-green?style=for-the-badge&logo=node.js)](https://nodejs.org/)
 [![Discord](https://img.shields.io/badge/Discord-Integration-7289da?style=for-the-badge&logo=discord)](https://discord.com/)
@@ -14,7 +14,7 @@
 ## 📊 Live Stats
 
 ![GitHub Activity](https://img.shields.io/github/commit-activity/m/itzdaimy/RugPlay-Automation?style=flat-square&color=brightgreen)
-![GitHub last commit](https://img.shields.io/github/last-commit/itzdaimyRugPlay-Automation?style=flat-square&color=blue)
+![GitHub last commit](https://img.shields.io/github/last-commit/itzdaimy/RugPlay-Automation?style=flat-square&color=blue)
 ![GitHub repo size](https://img.shields.io/github/repo-size/itzdaimy/RugPlay-Automation?style=flat-square&color=orange)
 ![GitHub watchers](https://img.shields.io/github/watchers/itzdaimy/RugPlay-Automation?style=flat-square&color=purple)
 
