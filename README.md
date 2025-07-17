@@ -74,8 +74,7 @@
 
 3. **Set up environment**
    ```bash
-   cp .env.example .env
-   # Edit .env with your configuration
+   # Edit config.json with your configuration
    ```
 
 4. **Run the bot**
@@ -203,7 +202,6 @@ rugplay-bot/
 ├── config.json        # Bot configuration
 ├── history.json       # Trading history
 ├── package.json       # Dependencies
-├── .env              # Environment variables
 └── README.md         # This file
 ```
 
@@ -212,7 +210,6 @@ rugplay-bot/
 - `discord.js` - Discord integration
 - `chalk` - Terminal colors
 - `readline` - User input handling
-- `dotenv` - Environment management
 
 ---
 
@@ -223,6 +220,7 @@ rugplay-bot/
 > - Set appropriate stop-losses
 > - Monitor your account regularly
 > - Understand the risks involved
+> - I (daimy) am NOT responsible for a loss in money, items, accounts or ANYTHING ELSE!!
 
 ---
 
