@@ -1,5 +1,6 @@
 # 🎯 RugPlay Smart Coinflip Bot
 
+![Views](https://visitor-badge.laobi.icu/badge?page_id=itzdaimy.RugPlay-Automation&style=for-the-badge&color=brightgreen)
 [![GitHub stars](https://img.shields.io/github/stars/itzdaimy/RugPlay-Automation?style=for-the-badge&logo=github&color=yellow)](https://github.com/itzdaimy/RugPlay-Automation/stargazers)
 [![GitHub forks](https://img.shields.io/github/forks/itzdaimy/RugPlay-Automation?style=for-the-badge&logo=github&color=blue)](https://github.com/itzdaimy/RugPlay-Automation/network)
 [![GitHub issues](https://img.shields.io/github/issues/itzdaimy/RugPlay-Automation?style=for-the-badge&logo=github&color=red)](https://github.com/itzdaimy/RugPlay-Automation/issues)
