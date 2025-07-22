@@ -1,48 +1,45 @@
-const readline = require('readline');
-const chalk = require('chalk');
-const { spawn } = require('child_process');
+const prompts = require("prompts");
+const chalk = require("chalk");
+const gradient = require("gradient-string");
+const { spawn } = require("child_process");
 
-function prompt(question) {
-  const rl = readline.createInterface({ input: process.stdin, output: process.stdout });
-  return new Promise(resolve => rl.question(chalk.cyan(`💡 ${question}`), answer => {
-    rl.close();
-    resolve(answer.trim());
-  }));
+function logHeader() {
+  console.clear();
+  console.log(gradient.pastel.multiline(`
+╔════════════════════════════════════════════╗
+║         RugPlay Automation Launcher        ║
+╚════════════════════════════════════════════╝
+`));
 }
 
 async function main() {
-  console.clear();
-  console.log(chalk.magenta.bold(`\n🎰 RugPlay Automation Launcher 🎯`));
-  console.log(chalk.gray("────────────────────────────────────────────"));
-  console.log(chalk.white("1. 🎯 Coinflip Mode"));
-  console.log(chalk.white("2. 🎰 Slots Mode"));
-  console.log(chalk.white("3. ❌ Exit"));
+  logHeader();
 
-  const choice = await prompt("\n👉 Choose your mode (1/2/3): ");
+  const { script } = await prompts({
+    type: "select",
+    name: "script",
+    message: "Choose your mode",
+    choices: [
+      { title: "🎯 Coinflip Mode", value: "coinflip.js" },
+      { title: "🎰 Slots Mode", value: "slots.js" },
+      { title: "❌ Exit", value: "exit" },
+    ],
+  });
 
-  let script = null;
-
-  switch (choice) {
-    case '1':
-      script = 'coinflip.js';
-      break;
-    case '2':
-      script = 'slots.js';
-      break;
-    case '3':
-      console.log(chalk.yellow("👋 Exiting..."));
-      process.exit(0);
-    default:
-      console.log(chalk.red("❌ Invalid choice."));
-      process.exit(1);
+  if (!script || script === "exit") {
+    console.log(chalk.yellow("👋 Goodbye!"));
+    process.exit(0);
   }
 
-  const child = spawn('node', [script], { stdio: 'inherit' });
+  const child = spawn("node", [script], { stdio: "inherit" });
 
-  child.on('exit', (code) => {
-    console.log(chalk.yellow(`\n⚙️ ${script} exited with code ${code}`));
+  child.on("exit", (code) => {
+    console.log(chalk.yellow(`\n⚙️  ${script} exited with code ${code}`));
     process.exit(code);
   });
 }
 
-main();
+main().catch(err => {
+    console.log(chalk.red('An unexpected error occurred.', err));
+    process.exit(1);
+});
